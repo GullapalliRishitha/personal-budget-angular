@@ -1,0 +1,34 @@
+
+ [
+        {
+            "title": "Healthcare",
+            "budget": 100
+        },
+        {
+            "title": "Pets",
+            "budget": 250
+        },
+        {
+            "title": "Cars",
+            "budget": 90
+        },
+        {
+            "title": "Utilities",
+            "budget": 80
+        },
+        {
+            "title": "Transportation",
+            "budget": 200
+        },
+        {
+            "title": "Food",
+            "budget": 90
+        },
+        {
+            "title": "Insurance",
+            "budget": 120
+        }
+    ]
+    
+   
+    
