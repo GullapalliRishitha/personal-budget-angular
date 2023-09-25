@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, OnInit} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Chart } from 'chart.js/auto';
+import { DataService } from '../data.service';
+
 
 
 
@@ -11,17 +13,20 @@ import { Chart } from 'chart.js/auto';
 })
 export class HomepageComponent implements AfterViewInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private dataService: DataService ) { };
 
   public dataSource = {
     datasets: [
         {
             data: [],
             backgroundColor: [
-                '#ffcd56',
                 '#ff6384',
                 '#36a2eb',
-                '#fd6b19',
+                '#ee82ee',
+                '#ffcd56',
+                '#dc143c',
+                '#ff8c00',
+                '#800080',
             ]
         }
     ],
@@ -29,8 +34,7 @@ export class HomepageComponent implements AfterViewInit {
   };
 
   ngAfterViewInit(): void {
-      this.http.get('http://localhost:3000/budget')
-      .subscribe((res: any) => {
+    this.dataService.getBudgetData().subscribe(res => {
 
           for (const item of res) {
             (this.dataSource.datasets[0].data as number[]).push(item.budget);
