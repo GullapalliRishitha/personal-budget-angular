@@ -34,7 +34,7 @@ export class D3chartComponent implements OnInit{
       .attr("transform", `translate(${width / 2}, ${height / 2})`);
 
     const color = d3.scaleOrdinal()
-      .range(["#ffcd56", "#0000ff", "#daa520", "#fd6b19", "#808080", "#a0522d", "#808080", "#000080", "#00ced1"]);
+      .range(["#ffcd56", "#32cd32", "#fd6b19", "#808080", "#a0522d", "#b0e0e6", "#bc8f8f", "#87ceeb","#00ced1"]);
 
     const pie = d3.pie()
       .value((d: any) => d.budget);
